@@ -1,7 +1,10 @@
 
 /* tslint:disable:quotemark */
 // Defines Sequelize model for service `users`. (Can be re-generated.)
+// TODO fix ts-ignore
+// @ts-ignore
 import merge from 'lodash.merge';
+// @ts-ignore
 import Sequelize, { DefineAttributes } from 'sequelize';
 // tslint:disable-next-line:no-unused-variable
 const DataTypes = (Sequelize as any).DataTypes as Sequelize.DataTypes;
