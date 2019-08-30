@@ -18,6 +18,31 @@
       "socketio"
     ]
   },
-  "services": {},
-  "hooks": {}
+  "services": {
+    "users": {
+      "name": "users",
+      "nameSingular": "user",
+      "subFolder": "",
+      "fileName": "users",
+      "adapter": "mongoose",
+      "path": "/users",
+      "isAuthEntity": true,
+      "requiresAuth": true,
+      "graphql": true
+    }
+  },
+  "hooks": {},
+  "authentication": {
+    "strategies": [
+      "local"
+    ],
+    "entity": "users"
+  },
+  "connections": {
+    "mongoose": {
+      "database": "mongodb",
+      "adapter": "mongoose",
+      "connectionString": "mongodb://localhost:27017/intra_app"
+    }
+  }
 }

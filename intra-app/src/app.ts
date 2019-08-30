@@ -22,7 +22,9 @@ import appHooks from './app.hooks';
 import channels from './channels';
 // tslint:disable-next-line
 const generatorSpecs = require('../feathers-gen-specs.json');
+import authentication from './authentication';
 
+import mongoose from './mongoose';
 // !code: imports // !end
 // !code: init // !end
 
@@ -71,9 +73,13 @@ app.configure(express.rest(
 app.configure(socketio(
   // !code: express_socketio // !end
 ));
+// Configure database adapters
+app.configure(mongoose);
 
 // Configure other middleware (see `middleware/index.ts`)
 app.configure(middleware);
+// Configure authentication (see `authentication.ts`)
+app.configure(authentication);
 // Set up our services (see `services/index.ts`)
 app.configure(services);
 // Set up event channels (see channels.ts)

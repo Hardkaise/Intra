@@ -10,5 +10,30 @@
     "environmentsAllowingSeedData": [
       "yes"
     ]
-  }
+  },
+  "authentication": {
+    "secret": "3b100700310ea18ff402d969406a1f751a1e1fa1b7a4aff6ea8d8621ef29104ea7fdc21a8f03ea753b0506ef082fd895073cd76898ab32eaccce3a954abc3fa85a471ac12d811351a4ada38bf3906d085afd700e7f1e925177e7841a89ba7bf05d29230dc0b7a203ca2e78e685db44e58dd092d3ab01059d79122b50651ad605e858c69d412d2ac7eee2e5312cc84768cd0b219762e15a17d316e1df56fa92a7181d97695430163f8785fdf7b00c086bc33c43bb9ceb478fe8c82af543caea764d8cb0b4bf05f7dedf1bdefb9cda4fd0ad052e5df376003f5eace909a9162232a93348367a75bc50d4e5ee58a9fabc4aabfef5f861ac777e97d25f1b5e4b9e5e",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/intra_app"
 }

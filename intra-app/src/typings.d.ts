@@ -7,6 +7,9 @@ declare module '*.json';
 
 // Application.
 
+// Services.
+declare module 'feathers-mongoose';
+
 // Seed.
 declare module '@feathers-plus/test-utils';
 
