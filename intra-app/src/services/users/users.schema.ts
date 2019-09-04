@@ -1,9 +1,8 @@
-
 // Define the Feathers schema for service `users`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
-
 // Define the model using JSON-schema
+
 let schema = {
   // !<DEFAULT> code: schema_header
   title: 'Users',
@@ -29,13 +28,13 @@ let schema = {
   // Fields in the model.
   properties: {
     _id: { type: 'ID' },
-    email: String,
-    password: String,
-    firstName: String,
-    lastName: String,
-    dateOfBirth: String,
-    personalPhoneNb: String,
-    homePhoneNb: String,
+    email: { type: 'string' },
+    password: { type: 'string' },
+    firstName: { type: 'string' },
+    lastName: { type: 'string' },
+    dateOfBirth: { type: 'string' },
+    personalPhoneNb: { type: 'string' },
+    homePhoneNb: { type: 'string' },
     addressId: { type: 'ID' }
   },
   // !code: schema_more // !end

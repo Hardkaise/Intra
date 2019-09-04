@@ -1,4 +1,3 @@
-
 /* tslint:disable:quotemark */
 // Defines the MongoDB $jsonSchema for service `users`. (Can be re-generated.)
 // TODO FIx ts-ignore
