@@ -1,7 +1,7 @@
 
 /* tslint:disable:quotemark */
 // Defines the MongoDB $jsonSchema for service `users`. (Can be re-generated.)
-// TODO Fix ts
+// TODO Fix ts-ignore
 // @ts-ignore
 import merge from 'lodash.merge';
 // !code: imports // !end
@@ -17,6 +17,7 @@ let moduleExports = merge({},
         bsonType: "objectId"
       },
       email: {
+        unique: true,
         bsonType: "string"
       },
       password: {

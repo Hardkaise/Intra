@@ -31,7 +31,8 @@ let base = merge({},
         type: ID
       },
       email: {
-        type: "string"
+        type: "string",
+        unique: true
       },
       password: {
         type: "string"

@@ -31,7 +31,10 @@ let schema = {
   properties: {
     // !code: schema_properties
     _id: { type: 'ID' },
-    email: { type: 'string' },
+    email: {
+      type: 'string',
+      unique: true,
+    },
     password: { type: 'string' },
     firstName: { type: 'string' },
     lastName: { type: 'string' },
