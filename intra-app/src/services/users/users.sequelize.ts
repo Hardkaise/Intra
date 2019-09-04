@@ -1,7 +1,7 @@
 
 /* tslint:disable:quotemark */
 // Defines Sequelize model for service `users`. (Can be re-generated.)
-// TODO Fix ts-ignore
+// TODO Fix ts
 // @ts-ignore
 import merge from 'lodash.merge';
 // @ts-ignore
@@ -16,7 +16,38 @@ const DataTypes = (Sequelize as any).DataTypes as Sequelize.DataTypes;
 //   password:   { type: DataTypes.STRING, allowNull: false },
 let moduleExports = merge({},
   // !<DEFAULT> code: sequelize_model
-  {} as DefineAttributes,
+  {
+    email: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    password: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    firstName: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    lastName: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    dateOfBirth: {
+      type: DataTypes.TEXT
+    },
+    personalPhoneNb: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    homePhoneNb: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    addressId: {
+      type: DataTypes.INTEGER
+    }
+  } as DefineAttributes,
   // !end
   // !code: moduleExports // !end
 );

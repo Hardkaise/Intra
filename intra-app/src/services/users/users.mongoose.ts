@@ -9,7 +9,34 @@ import mongoose from 'mongoose';
 
 let moduleExports = merge({},
   // !<DEFAULT> code: model
-  {},
+  {
+    email: {
+      type: String,
+      required: true
+    },
+    password: {
+      type: String,
+      required: true
+    },
+    firstName: {
+      type: String,
+      required: true
+    },
+    lastName: {
+      type: String,
+      required: true
+    },
+    dateOfBirth: String,
+    personalPhoneNb: {
+      type: String,
+      required: true
+    },
+    homePhoneNb: {
+      type: String,
+      required: true
+    },
+    addressId: mongoose.Schema.Types.ObjectId
+  },
   // !end
   // !code: moduleExports // !end
 );

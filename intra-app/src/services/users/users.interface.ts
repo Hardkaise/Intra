@@ -5,12 +5,25 @@
 
 // tslint:disable-next-line:no-empty-interface
 export interface UserBase {
-  // !code: interface // !end
+  // !<DEFAULT> code: interface
+  _id: unknown;
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  dateOfBirth: string;
+  personalPhoneNb: string;
+  homePhoneNb: string;
+  addressId: unknown;
+  // !end
 }
 
 // tslint:disable-next-line:no-empty-interface
 export interface User extends UserBase {
-  // !code: more // !end
+  // !<DEFAULT> code: more
+  _id: any; // change if needed
+  addressId: any; // change if needed
+  // !end
 }
 
 // !code: funcs // !end
