@@ -1,7 +1,7 @@
 
 /* tslint:disable:quotemark */
 // Defines the MongoDB $jsonSchema for service `users`. (Can be re-generated.)
-// TODO look at ts-ignore
+// TODO FIx ts-ignore
 // @ts-ignore
 import merge from 'lodash.merge';
 // !code: imports // !end

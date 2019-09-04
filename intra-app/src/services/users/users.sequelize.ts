@@ -1,7 +1,7 @@
 
 /* tslint:disable:quotemark */
 // Defines Sequelize model for service `users`. (Can be re-generated.)
-// TODO fix ts-ignore
+// TODO Fix ts-ignore
 // @ts-ignore
 import merge from 'lodash.merge';
 // @ts-ignore

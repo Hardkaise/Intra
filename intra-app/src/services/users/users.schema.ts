@@ -14,12 +14,12 @@ let schema = {
   // Required fields.
   required: [
     'email',
+    'password',
     'firstName',
     'lastName',
-    'password',
+    'dateOfBirth',
     'personalPhoneNb',
-    'homePhoneNb',
-    'addressId'
+    'homePhoneNb'
   ],
   // Fields with unique values.
   uniqueItemProperties: [
@@ -33,9 +33,10 @@ let schema = {
     password: String,
     firstName: String,
     lastName: String,
+    dateOfBirth: String,
     personalPhoneNb: String,
     homePhoneNb: String,
-    addressId: { type: 'ID'},
+    addressId: { type: 'ID' }
   },
   // !code: schema_more // !end
 };
