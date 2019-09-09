@@ -1,11 +1,10 @@
-
 /* tslint:disable:quotemark */
 // Defines the MongoDB $jsonSchema for service `users`. (Can be re-generated.)
-import { merge } from 'lodash';
+ import { merge } from 'lodash';
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+ let moduleExports = merge({},
   // !<DEFAULT> code: model
   {
     bsonType: "object",
@@ -61,8 +60,7 @@ let moduleExports = merge({},
       "lastName",
       "password",
       "personalPhoneNb",
-      "homePhoneNb",
-      "roles"
+      "homePhoneNb"
     ]
   },
   // !end
@@ -70,7 +68,7 @@ let moduleExports = merge({},
 );
 
 // !code: exports // !end
-export default moduleExports;
+ export default moduleExports;
 
 // !code: funcs // !end
 // !code: end // !end

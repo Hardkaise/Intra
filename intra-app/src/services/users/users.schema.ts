@@ -20,7 +20,6 @@ let schema = {
     'password',
     'personalPhoneNb',
     'homePhoneNb',
-    'roles'
     // !end
   ],
   // Fields with unique values.
@@ -45,10 +44,10 @@ let schema = {
     addressId: { type: 'ID' },
     roles: {
       type: 'array',
+      default: [ 'student' ],
       items: {
         type: 'string',
-        enum: ['admin', 'teacher', 'parent', 'student' ],
-        default: [ 'student' ]
+        enum: ['admin', 'teacher', 'parent', 'student' ]
       }
     },
     // !code: schema_properties // !end

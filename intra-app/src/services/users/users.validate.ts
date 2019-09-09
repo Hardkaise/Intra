@@ -23,8 +23,7 @@ let base = merge({},
       "lastName",
       "password",
       "personalPhoneNb",
-      "homePhoneNb",
-      "roles"
+      "homePhoneNb"
     ],
     uniqueItemProperties: [],
     properties: {

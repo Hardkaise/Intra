@@ -1,4 +1,3 @@
-
 /* tslint:disable:quotemark */
 // Defines Sequelize model for service `users`. (Can be re-generated.)
 import { merge } from 'lodash';

@@ -37,18 +37,11 @@ let moduleExports = merge({},
       required: true
     },
     addressId: mongoose.Schema.Types.ObjectId,
-    roles: [
-      {
-        default: "student",
-        type: String,
-        enum: [
-          "admin",
-          "teacher",
-          "parent",
-          "student"
-        ]
-      }
-    ]
+    roles: {
+      type: [ String ],
+      enum: ['admin', 'teacher', 'parent', 'student'],
+      default: ['student']
+    }
   },
   // !end
   // !code: moduleExports // !end
