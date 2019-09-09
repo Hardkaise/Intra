@@ -1,25 +1,24 @@
 
-// Define the Feathers schema for service `users`. (Can be re-generated.)
+// Define the Feathers schema for service `grades`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
 
 // Define the model using JSON-schema
 let schema = {
   // !<DEFAULT> code: schema_header
-  title: 'Users',
-  description: 'Users database.',
+  title: 'Grades',
+  description: 'Grades database.',
   // !end
   // !code: schema_definitions // !end
 
   // Required fields.
   required: [
     // !code: schema_required
-    'email',
-    'firstName',
-    'lastName',
-    'password',
-    'personalPhoneNb',
-    'homePhoneNb',
+    'grade',
+    'maxGrade',
+    'comment',
+    'date',
+    'teacherID'
     // !end
   ],
   // Fields with unique values.
@@ -31,25 +30,11 @@ let schema = {
   properties: {
     // !code: schema_properties
     _id: { type: 'ID' },
-    email: {
-      type: 'string',
-      unique: true,
-    },
-    password: { type: 'string' },
-    firstName: { type: 'string' },
-    lastName: { type: 'string' },
-    dateOfBirth: { type: 'string' },
-    personalPhoneNb: { type: 'string' },
-    homePhoneNb: { type: 'string' },
-    addressId: { type: 'ID' },
-    roles: {
-      type: 'array',
-      default: [ 'student' ],
-      items: {
-        type: 'string',
-        enum: ['admin', 'teacher', 'parent', 'student' ]
-      }
-    },
+    grade: { type: 'integer' },
+    maxGrade: { type: 'integer' },
+    comment: { type: 'string' },
+    date: { type: 'string' },
+    teacherID: { type: 'ID' }
     // !end
   },
   // !code: schema_more // !end
@@ -60,12 +45,12 @@ let extensions = {
   // GraphQL generation.
   graphql: {
     // !code: graphql_header
-    name: 'User',
+    name: 'Grade',
     service: {
       sort: { _id: 1 },
     },
     // sql: {
-    //   sqlTable: 'Users',
+    //   sqlTable: 'Grades',
     //   uniqueKey: '_id',
     //   sqlColumn: {
     //     __authorId__: '__author_id__',

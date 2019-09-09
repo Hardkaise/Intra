@@ -1,6 +1,7 @@
 
 // Application interface. (Can be re-generated.)
 import { Application } from '@feathersjs/express';
+import { Grade } from './services/grades/grades.interface';
 import { User } from './services/users/users.interface';
 import {ServiceAddons} from '@feathersjs/feathers';
 // !code: imports // !end
@@ -19,6 +20,7 @@ import {ServiceAddons} from '@feathersjs/feathers';
   });
  */
 export type App = Application<{
+  'grades': Grade,
   'users': User,
   'authentication': ServiceAddons<any>
   // !code: moduleExports // !end

@@ -1,6 +1,7 @@
 
 // Configure the Feathers services. (Can be re-generated.)
 import { App } from '../app.interface';
+import grades from './grades/grades.service';
 import users from './users/users.service';
 
 // !code: imports // !end
@@ -8,6 +9,7 @@ import users from './users/users.service';
 
 // tslint:disable-next-line:no-unused-variable
 let moduleExports = function (app: App) {
+  app.configure(grades);
   app.configure(users);
   // !code: func_return // !end
 };

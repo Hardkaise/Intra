@@ -29,6 +29,17 @@
       "isAuthEntity": true,
       "requiresAuth": true,
       "graphql": true
+    },
+    "grades": {
+      "name": "grades",
+      "nameSingular": "grade",
+      "subFolder": "",
+      "fileName": "grades",
+      "adapter": "mongoose",
+      "path": "/grades",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
     }
   },
   "hooks": {},
