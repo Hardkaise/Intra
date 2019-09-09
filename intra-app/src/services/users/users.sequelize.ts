@@ -1,9 +1,8 @@
 
 /* tslint:disable:quotemark */
 // Defines Sequelize model for service `users`. (Can be re-generated.)
-// TODO Fix ts
-// @ts-ignore
-import merge from 'lodash.merge';
+import { merge } from 'lodash';
+// TODO Fix ts-ignore
 // @ts-ignore
 import Sequelize, { DefineAttributes } from 'sequelize';
 // tslint:disable-next-line:no-unused-variable
@@ -46,6 +45,13 @@ let moduleExports = merge({},
     },
     addressId: {
       type: DataTypes.INTEGER
+    },
+    roles: {
+      type: DataTypes.JSONB,
+      allowNull: false,
+      defaultValue: [
+        "student"
+      ]
     }
   } as DefineAttributes,
   // !end

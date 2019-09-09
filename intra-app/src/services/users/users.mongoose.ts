@@ -36,7 +36,19 @@ let moduleExports = merge({},
       type: String,
       required: true
     },
-    addressId: mongoose.Schema.Types.ObjectId
+    addressId: mongoose.Schema.Types.ObjectId,
+    roles: [
+      {
+        default: "student",
+        type: String,
+        enum: [
+          "admin",
+          "teacher",
+          "parent",
+          "student"
+        ]
+      }
+    ]
   },
   // !end
   // !code: moduleExports // !end

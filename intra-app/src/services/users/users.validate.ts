@@ -2,7 +2,7 @@
 /* tslint:disable:quotemark */
 // Validation definitions for validateSchema hook for service `users`. (Can be re-generated.)
 import { validateSchema } from 'feathers-hooks-common';
-import merge from 'lodash.merge';
+import { merge } from 'lodash';
 import ajv from 'ajv';
 // !code: imports // !end
 // !code: init // !end
@@ -23,7 +23,8 @@ let base = merge({},
       "lastName",
       "password",
       "personalPhoneNb",
-      "homePhoneNb"
+      "homePhoneNb",
+      "roles"
     ],
     uniqueItemProperties: [],
     properties: {
@@ -54,6 +55,21 @@ let base = merge({},
       },
       addressId: {
         type: ID
+      },
+      roles: {
+        type: "array",
+        default: [
+          "student"
+        ],
+        items: {
+          type: "string",
+          enum: [
+            "admin",
+            "teacher",
+            "parent",
+            "student"
+          ]
+        }
       }
     }
   },

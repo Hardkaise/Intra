@@ -1,9 +1,7 @@
 
 /* tslint:disable:quotemark */
 // Defines the MongoDB $jsonSchema for service `users`. (Can be re-generated.)
-// TODO Fix ts-ignore
-// @ts-ignore
-import merge from 'lodash.merge';
+import { merge } from 'lodash';
 // !code: imports // !end
 // !code: init // !end
 
@@ -40,6 +38,21 @@ let moduleExports = merge({},
       },
       addressId: {
         bsonType: "objectId"
+      },
+      roles: {
+        default: [
+          "student"
+        ],
+        items: {
+          type: "string",
+          enum: [
+            "admin",
+            "teacher",
+            "parent",
+            "student"
+          ]
+        },
+        bsonType: "array"
       }
     },
     required: [
@@ -48,7 +61,8 @@ let moduleExports = merge({},
       "lastName",
       "password",
       "personalPhoneNb",
-      "homePhoneNb"
+      "homePhoneNb",
+      "roles"
     ]
   },
   // !end
