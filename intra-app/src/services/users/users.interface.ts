@@ -15,6 +15,7 @@ export interface UserBase {
   personalPhoneNb: string;
   homePhoneNb: string;
   addressId: unknown;
+  gradesID: string[];
   roles: string[];
   // !end
 }

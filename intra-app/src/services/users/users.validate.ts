@@ -55,6 +55,12 @@ let base = merge({},
       addressId: {
         type: ID
       },
+      gradesID: {
+        type: "array",
+        items: {
+          type: ID
+        }
+      },
       roles: {
         type: "array",
         default: [

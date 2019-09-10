@@ -45,6 +45,9 @@ let moduleExports = merge({},
     addressId: {
       type: DataTypes.INTEGER
     },
+    gradesID: {
+      type: DataTypes.JSONB
+    },
     roles: {
       type: DataTypes.JSONB,
       allowNull: false,

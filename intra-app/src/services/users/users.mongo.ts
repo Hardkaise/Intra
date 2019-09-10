@@ -38,6 +38,12 @@
       addressId: {
         bsonType: "objectId"
       },
+      gradesID: {
+        items: {
+          type: "ID"
+        },
+        bsonType: "array"
+      },
       roles: {
         default: [
           "student"
