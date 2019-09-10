@@ -18,7 +18,7 @@ let moduleExports = function (app: App) {
   const grades = new mongooseClient.Schema(mongooseSchema, { timestamps: true });
   // !end
 
-  let existingModel = mongooseClient.models['grades']; // needed for client/server tests
+  let existingModel = mongooseClient.models.grades; // needed for client/server tests
   let returns = existingModel || mongooseClient.model('grades', grades);
 
   // !code: mongoose_func_return // !end
