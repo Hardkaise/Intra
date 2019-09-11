@@ -22,7 +22,10 @@ import {ServiceAddons} from '@feathersjs/feathers';
 export type App = Application<{
   'grades': Grade,
   'users': User,
-  'authentication': ServiceAddons<any>
+  'authentication': ServiceAddons<any>,
+  '/graphql': ServiceAddons<any>,
+  '/grades': Grade,
+  '/users': User
   // !code: moduleExports // !end
 }>;
 // !code: funcs // !end

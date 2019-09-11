@@ -55,5 +55,13 @@
       "adapter": "mongoose",
       "connectionString": "mongodb://localhost:27017/intra_app"
     }
+  },
+  "graphql": {
+    "path": "/graphql",
+    "strategy": "services",
+    "sqlInterface": null,
+    "requiresAuth": false,
+    "doNotConfigure": false,
+    "name": "graphql"
   }
 }

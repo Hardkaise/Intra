@@ -10,6 +10,10 @@ declare module '*.json';
 // Services.
 declare module 'feathers-mongoose';
 
+// GraphQL.
+declare module '@feathers-plus/graphql';
+declare module 'merge-graphql-schemas';
+
 // Seed.
 declare module '@feathers-plus/test-utils';
 

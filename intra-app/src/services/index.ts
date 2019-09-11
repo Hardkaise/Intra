@@ -4,6 +4,7 @@ import { App } from '../app.interface';
 import grades from './grades/grades.service';
 import users from './users/users.service';
 
+import graphql from './graphql/graphql.service';
 // !code: imports // !end
 // !code: init // !end
 
@@ -11,6 +12,8 @@ import users from './users/users.service';
 let moduleExports = function (app: App) {
   app.configure(grades);
   app.configure(users);
+
+  app.configure(graphql);
   // !code: func_return // !end
 };
 

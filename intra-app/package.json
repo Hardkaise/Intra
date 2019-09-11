@@ -33,6 +33,7 @@
     "compile": "tsc -p tsconfig.json"
   },
   "dependencies": {
+    "@feathers-plus/graphql": "^1.10.0",
     "@feathers-plus/test-utils": "^0.3.6",
     "@feathersjs/authentication": "^2.1.16",
     "@feathersjs/authentication-jwt": "^2.0.10",
@@ -48,8 +49,10 @@
     "cross-env": "^5.2.0",
     "feathers-hooks-common": "^4.20.7",
     "feathers-mongoose": "^6.3.0",
+    "graphql-resolvers-ast": "^1.4.0",
     "helmet": "^3.20.0",
     "lodash.merge": "^4.6.2",
+    "merge-graphql-schemas": "^1.7.0",
     "mongodb-core": "^3.2.7",
     "mongoose": "^5.6.11",
     "serve-favicon": "^2.5.0",
@@ -67,6 +70,7 @@
     "@types/feathersjs__express": "^1.1.6",
     "@types/feathersjs__feathers": "^3.1.5",
     "@types/feathersjs__socketio": "^3.0.7",
+    "@types/graphql": "^0.13.4",
     "@types/helmet": "0.0.40",
     "@types/lodash.merge": "^4.6.6",
     "@types/mocha": "^5.2.7",

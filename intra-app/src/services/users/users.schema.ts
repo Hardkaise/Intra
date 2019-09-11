@@ -77,9 +77,8 @@ let extensions = {
       // !code: graphql_discard // !end
     ],
     add: {
-      // !<DEFAULT> code: graphql_add
-      firstName: { type: 'String', args: false },
-      grades: { type: '[Grade!]', args: false, relation: { ourTable: 'gradeID', otherTable: '_id'}}, sort: { _id: 1 }
+      // !code: graphql_add
+    //  grades: { type: '[Grade!]', args: true, relation: { ourTable: 'gradeID', otherTable: '_id'}}
       // !end
     },
     // !code: graphql_more // !end

@@ -25,6 +25,21 @@ server.on('listening', async () => {
   // !end
   // !code: listening // !end
   await seedData(app);
+
+  const graphql = app.service('graphql');
+  const myQuery = `
+  {
+  findUser(query: {}) {
+    firstName
+    lastName
+    email
+  }
+  }
+`;
+
+  graphql.find({ query: { query: myQuery } })
+  // tslint:disable-next-line:no-console
+    .then(result => console.log(result));
   // !code: listening1 // !end
 });
 
